@@ -25,11 +25,9 @@ def cambia_letras(animal, file):
 def ficheromascota():
     with open("mascota.txt", "a") as file:
         mascota = input("Dime el nombre de la mascota")
-        #mascota.strip()
         while mascota.isalpha() == False:
             print("No es una palabra, introduzcala otra vez")
             mascota = input("Dime el nombre de la mascota")
-            #mascota = mascota.strip()
         cambia_letras(mascota,file)
     file.close()
 
